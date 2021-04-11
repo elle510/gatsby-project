@@ -1,6 +1,6 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const Header = ({ siteTitle }) => (
   <header
@@ -32,41 +32,41 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul>
         <li>
-          <Link to="/" activeStyle={{ color: "red" }}>
+          <Link to="/" activeStyle={{ color: 'red' }}>
             Index
           </Link>
         </li>
         <li>
-          <Link to="/about" activeStyle={{ color: "red" }}>
+          <Link to="/about" activeStyle={{ color: 'red' }}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" activeStyle={{ color: "red" }}>
+          <Link to="/contact" activeStyle={{ color: 'red' }}>
             Contact
           </Link>
         </li>
         <li>
-          <Link to="/page-2" activeStyle={{ color: "red" }}>
+          <Link to="/page-2" activeStyle={{ color: 'red' }}>
             Page2
           </Link>
         </li>
         <li>
-          <Link to="/using-typescript" activeStyle={{ color: "red" }}>
+          <Link to="/using-typescript" activeStyle={{ color: 'red' }}>
             UsingTypescript
           </Link>
         </li>
       </ul>
     </nav>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
