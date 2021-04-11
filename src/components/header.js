@@ -4,12 +4,12 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+  // style={{
+  //   background: `rebeccapurple`,
+  //   marginBottom: `1.45rem`,
+  // }}
   >
-    <div
+    {/* <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -27,7 +27,27 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </div> */}
+    <h1>Ahn</h1>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Index</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/page-2">Page2</Link>
+        </li>
+        <li>
+          <Link to="/using-typescript">UsingTypescript</Link>
+        </li>
+      </ul>
+    </nav>
   </header>
 )
 
