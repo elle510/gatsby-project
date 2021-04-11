@@ -32,19 +32,29 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul>
         <li>
-          <Link to="/">Index</Link>
+          <Link to="/" activeStyle={{ color: "red" }}>
+            Index
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" activeStyle={{ color: "red" }}>
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" activeStyle={{ color: "red" }}>
+            Contact
+          </Link>
         </li>
         <li>
-          <Link to="/page-2">Page2</Link>
+          <Link to="/page-2" activeStyle={{ color: "red" }}>
+            Page2
+          </Link>
         </li>
         <li>
-          <Link to="/using-typescript">UsingTypescript</Link>
+          <Link to="/using-typescript" activeStyle={{ color: "red" }}>
+            UsingTypescript
+          </Link>
         </li>
       </ul>
     </nav>
