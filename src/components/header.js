@@ -2,12 +2,15 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
+import * as headerStyles from './header.module.scss';
+
 const Header = ({ siteTitle }) => (
   <header
-  // style={{
-  //   background: `rebeccapurple`,
-  //   marginBottom: `1.45rem`,
-  // }}
+    className={headerStyles.header}
+    // style={{
+    //   background: `rebeccapurple`,
+    //   marginBottom: `1.45rem`,
+    // }}
   >
     {/* <div
       style={{
@@ -28,31 +31,55 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div> */}
-    <h1>Ahn</h1>
+    <h1>
+      <Link className={headerStyles.title} to="/">
+        Ahn
+      </Link>
+    </h1>
     <nav>
-      <ul>
+      <ul className={headerStyles.navList}>
         <li>
-          <Link to="/" activeStyle={{ color: 'red' }}>
+          <Link
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+            to="/"
+          >
             Index
           </Link>
         </li>
         <li>
-          <Link to="/about" activeStyle={{ color: 'red' }}>
+          <Link
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+            to="/about"
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" activeStyle={{ color: 'red' }}>
+          <Link
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+            to="/contact"
+          >
             Contact
           </Link>
         </li>
         <li>
-          <Link to="/page-2" activeStyle={{ color: 'red' }}>
+          <Link
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+            to="/page-2"
+          >
             Page2
           </Link>
         </li>
         <li>
-          <Link to="/using-typescript" activeStyle={{ color: 'red' }}>
+          <Link
+            className={headerStyles.navItem}
+            activeClassName={headerStyles.activeNavItem}
+            to="/using-typescript"
+          >
             UsingTypescript
           </Link>
         </li>
