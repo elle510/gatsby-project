@@ -48,4 +48,28 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+
+  // contentful
+  const contentfulTemplate = path.resolve('./src/templates/contentful.tsx');
+  const cres = await graphql(`
+    query {
+      allContentfulBlogPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `);
+
+  cres.data.allContentfulBlogPost.edges.forEach((edge) => {
+    createPage({
+      component: contentfulTemplate,
+      path: `/contentful/${edge.node.slug}`,
+      context: {
+        slug: edge.node.slug,
+      },
+    });
+  });
 };

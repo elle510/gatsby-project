@@ -71,6 +71,15 @@ const Header = ({ siteTitle }) => {
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
+              to="/contentful"
+            >
+              Contentful
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={headerStyles.navItem}
+              activeClassName={headerStyles.activeNavItem}
               to="/about"
             >
               About
