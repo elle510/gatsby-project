@@ -4,7 +4,9 @@ import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
+// TODO: body { json } 이 없음 - 확인필요
 export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
@@ -30,6 +32,7 @@ const Contentful = (props) => {
 
   return (
     <Layout>
+      <SEO title={props.data.contentfulBlogPost.title} />
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       {/* {documentToReactComponents(props.data.contentfulBlogPost.body.raw, options)} */}
